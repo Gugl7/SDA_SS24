@@ -1,7 +1,6 @@
 import networkx as nx
 from networkx.algorithms.approximation import treewidth_min_degree
 import itertools
-import matplotlib.pyplot as plt
 import pandas as pd
 
 def find_balanced_separator(G, max_size):
