@@ -3,7 +3,6 @@ from networkx.algorithms.approximation import treewidth_min_degree
 import itertools
 import matplotlib.pyplot as plt
 import pandas as pd
-from sage.all import Graph
 
 def find_balanced_separator(G, max_size):
     nodes = list(G.nodes)
