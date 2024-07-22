@@ -8,17 +8,14 @@ def max_cardinality_search_ordering(G):
     ordering = [None] * len(G)
     labeled_nodes = set()
     
-    # Randomly pick the first node
     current_node = random.choice(list(G.nodes))
     ordering[len(G) - 1] = current_node
     labeled_nodes.add(current_node)
     
-    # Label the rest of the nodes
     for i in range(len(G) - 2, -1, -1):
       max_neighbors = -1
       next_node = None
       
-      # Find the unlabeled node with the most labeled neighbors
       for node in G.nodes:
         if node not in labeled_nodes:
           labeled_neighbors = sum(1 for neighbor in G.neighbors(node) if neighbor in labeled_nodes)
